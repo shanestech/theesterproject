@@ -10,13 +10,14 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
       background-color: #f4f4f4;
       position: relative;
-      overflow: hidden; /* prevents scrollbars from images */
+      overflow: hidden;
     }
 
     h1 {
@@ -27,6 +28,26 @@
     p {
       font-size: 1.5rem;
       margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    /* Download button */
+    .download-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background-color: #007BFF; /* blue */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-bottom: 40px; /* space above bottom bar */
+    }
+
+    .download-btn:hover {
+      background-color: #0056b3;
+      transition: 0.2s;
     }
 
     .images img {
@@ -34,7 +55,7 @@
       width: 512px;
       height: 512px;
       bottom: 0;
-      z-index: 0; /* behind text and bottom bar */
+      z-index: 0;
     }
     .bottom-left { left: 0; }
     .bottom-right { right: 0; }
@@ -51,7 +72,7 @@
       gap: 20px;
       padding: 10px 0;
       font-size: 1.2rem;
-      z-index: 1; /* above images */
+      z-index: 1;
     }
 
     .bottom-bar a {
@@ -69,7 +90,6 @@
       transition: 0.2s;
     }
 
-    /* Centered text */
     .center-text {
       z-index: 1;
     }
@@ -80,6 +100,7 @@
   <div class="center-text">
     <h1>🚧 This site is under construction 🚧</h1>
     <p>we're sorry :(</p>
+    <a class="download-btn" href="https://sourceforge.net/projects/esteros/files/" target="_blank">Download</a>
   </div>
 
   <div class="images">
@@ -94,7 +115,7 @@
   </div>
 
   <script>
-    // === Paste your links here ===
+    // Replace with your actual links
     const tiktokURL = "https://www.tiktok.com/@theesterproject";
     const discordURL = "https://discord.gg/ZFAgAhng";
 
